@@ -1,0 +1,21 @@
+<h2>Lista de Usuários</h2>
+<button><a routerLink="/user">Cadastrar Usuário</a></button>
+<div class="users">
+    <ul>
+        <li *ngFor="let user of userList" class="item">
+          <span class="nome">{{user.title | titlecase }} - {{user.firstName}} {{user.lastName}} </span>
+          <br>
+          <span class="id">Id: {{user.id}}</span>
+          <br>
+          <img src={{user.picture}} alt="user pic"/>
+          <div>
+              <fa-icon [icon]="faTrash" title="Excluir Usuário" (click)="deleteUser(user)" class="icons"></fa-icon>
+              <a routerLink="/user/{{user.id}}" [queryParams]="{type:'edit'}"><fa-icon [icon]="faUserEdit" title="Atualizar Usuário" class="icons"></fa-icon></a>
+              <a routerLink="/user/{{user.id}}" [queryParams]="{type:'view'}"><fa-icon [icon]="faUserAlt" title="Consultar Usuário" class="icons"></fa-icon></a>
+          </div>
+        </li>
+    </ul>
+    <div class="align-center">
+        <button (click)="carregarMais()" [disabled]="!permiteCarregar">Carregar + Usuários</button>
+    </div>
+</div>

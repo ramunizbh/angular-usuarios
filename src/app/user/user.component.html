@@ -1,0 +1,98 @@
+<h2>{{title}}</h2>
+
+<span class="center idUser">ID Usuário: {{idRecebido}} </span>
+
+<div class="form-area">
+    <form [formGroup]="userForm" (ngSubmit)="save()">
+      <div class="mb-3">
+        <label class="form-label">Título</label>
+        <select
+          class="form-select"
+          formControlName="title"
+          aria-label="Default select example"
+        >
+          <option value="">-select-</option>
+          <option value="mr">Mr</option>
+          <option value="ms">Ms</option>
+          <option value="mrs">Mrs</option>
+          <option value="miss">Miss</option>
+          <option value="dr">Dr</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="firstName" class="form-label">Primeiro Nome: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          formControlName="firstName"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Último Nome: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          formControlName="lastName"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Sexo</label>
+        <select
+          class="form-select"
+          formControlName="gender"
+          aria-label="Default select example"
+        >
+          <option value="">-select-</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email: </label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="dateOfBirth" class="form-label">Data Nasc.: </label>
+        <input
+          type="date"
+          class="form-control"
+          id="dateOfBirth"
+          formControlName="dateOfBirth"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Fone: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          formControlName="phone"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="picture" class="form-label">Foto (URL): </label>
+        <input
+          type="text"
+          class="form-control"
+          id="picture"
+          formControlName="picture"
+        />
+      </div>
+      <div class="erro" *ngIf="msgErro">{{msgErro}}</div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Salvar</button>
+      <button><a routerLink="/">Voltar</a></button>
+      
+    </form>
+</div>
+
+<br/>
+

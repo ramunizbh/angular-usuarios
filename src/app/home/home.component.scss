@@ -1,0 +1,79 @@
+h2 {
+    margin: 25px auto;
+    text-align: center;
+}
+
+.item {
+    margin: 1rem;
+    padding: 1rem;
+    list-style-type: none;
+    border: 1px solid black;
+    width: 17rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.item:hover {
+    box-shadow: rgba(13, 33, 88, 0.6) 0px 5px 15px;
+    border: 1px solid white;
+}
+
+ul {
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+.nome {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+}
+
+.icons {
+    margin: 10px;
+    color: rgb(26, 68, 182);
+    cursor: pointer;
+}
+
+img {
+    width: 100px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+button {
+    border: none;
+    background-color: rgb(26, 68, 182);
+    color: white;
+    margin: 15px;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+button:disabled {
+    color: grey;
+}
